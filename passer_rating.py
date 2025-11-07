@@ -22,7 +22,19 @@ def passer_rating(completions, attempts, yards, touchdowns, interceptions):
 
     rating = ((a+b+c+d)/6)*100
     return round(rating, 1)
-print(passer_rating(31, 40, 500, 5, 0))
-print(passer_rating(0, 10, 0, 0, 0))
-print(passer_rating(3, 10, 30, 0, 1))
-print(passer_rating(0, 0, 0, 0, 0))
+
+if __name__ == "__main__":
+    print("NFL Passer Rating Calculator\n")
+
+    try:
+        attempts = int(input("Enter pass attempts: "))
+        completions = int(input("Enter completions: "))
+        yards = int(input("Enter passing yards: "))
+        touchdowns = int(input("Enter touchdowns: "))
+        interceptions = int(input("Enter interceptions: "))
+
+        rating = passer_rating(completions, attempts, yards, touchdowns, interceptions)
+        print(f"\nPasser rating: {rating}")
+
+    except ValueError:
+        print("Please enter only whole numbers for all inputs.")
