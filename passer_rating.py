@@ -27,8 +27,8 @@ if __name__ == "__main__":
     print("NFL Passer Rating Calculator\n")
 
     try:
-        attempts = int(input("Enter pass attempts: "))
         completions = int(input("Enter completions: "))
+        attempts = int(input("Enter pass attempts: "))
         yards = int(input("Enter passing yards: "))
         touchdowns = int(input("Enter touchdowns: "))
         interceptions = int(input("Enter interceptions: "))
