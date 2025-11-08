@@ -9,7 +9,7 @@ class TestPasserRating(unittest.TestCase):
         self.assertEqual(result, 'N/A')
     
     def test_perfect_case(self):
-        result = passer_rating(40, 31, 500, 5, 0)
+        result = passer_rating(31, 40, 500, 5, 0)
         self.assertEqual(result, '158.3')
     
 if __name__ == '__main__':
